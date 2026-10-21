@@ -88,11 +88,18 @@ export TAVILY_API_KEY=<your-tavily-api-key>
 
 ## 4. Add the incident CSV file
 
-Copy `daily_status_report_with_date.csv` into the folder you set in `daily.report.filepath`. The file has these columns:
+Download the sample file [`daily_status_report_with_date.csv`](sample-data/daily_status_report_with_date.csv) from this repository and copy it into the folder you set in `daily.report.filepath`.
+
+The file has these columns: `IncidentDate`, `ServiceName`, `Operation`, `Status`, `ExceptionClass` and `LogSnippet`. The sample file contains this data:
 
 ```csv
 IncidentDate,ServiceName,Operation,Status,ExceptionClass,LogSnippet
+2026-09-04,loan-origination-service,CreateTransactionAPI,FAILED,FileNotFoundException,FileNotFoundException: Input file missing
+2026-09-04,loan-origination-service,GenerateReport,FAILED,SocketTimeoutException,SocketTimeoutException: Read timed out
 2026-09-04,product-service,GenerateReport,FAILED,CannotGetJdbcConnectionException,CannotGetJdbcConnectionException: Unable to obtain JDBC Connection
+2026-09-04,payment-service,FileUpload,FAILED,SocketTimeoutException,SocketTimeoutException: Read timed out
+2026-09-04,payment-service,GenerateReport,FAILED,SocketTimeoutException,SocketTimeoutException: Read timed out
+2026-09-04,customer-api,DailyBatch,FAILED,NullPointerException,NullPointerException: Null reference
 ```
 
 Only rows with the status `FAILED` are embedded and inserted into the Milvus vector database. Other rows are skipped.

@@ -1,0 +1,7 @@
+IncidentDate,ServiceName,Operation,Status,ExceptionClass,LogSnippet
+2026-09-04,loan-origination-service,CreateTransactionAPI,FAILED,FileNotFoundException,FileNotFoundException: Input file missing
+2026-09-04,loan-origination-service,GenerateReport,FAILED,SocketTimeoutException,SocketTimeoutException: Read timed out
+2026-09-04,product-service,GenerateReport,FAILED,CannotGetJdbcConnectionException,CannotGetJdbcConnectionException: Unable to obtain JDBC Connection
+2026-09-04,payment-service,FileUpload,FAILED,SocketTimeoutException,SocketTimeoutException: Read timed out
+2026-09-04,payment-service,GenerateReport,FAILED,SocketTimeoutException,SocketTimeoutException: Read timed out
+2026-09-04,customer-api,DailyBatch,FAILED,NullPointerException,NullPointerException: Null reference
