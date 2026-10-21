@@ -1,0 +1,21 @@
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
