@@ -18,7 +18,7 @@ public class IncidentSearchToolRoute extends RouteBuilder {
 
         from("ai-tool:search_historical_incidents?description=Search historical production incidents using semantic similarity. Use this tool when you need historical incident information, previous failures, exceptions, logs, services, or operations." +
                 "&tags=incident" +
-                "&parameter.question.type=string" +
+                "&parameter.question=string" +
                 "&parameter.question.description=The incident or technical question to search for in historical incidents&parameter.question.required=true")
                 .routeId("ai-tool-search-historical-incidents")
 

@@ -22,7 +22,7 @@ public class TavilySearchToolRoute extends RouteBuilder {
         from("ai-tool:tavily_search"
                 + "?tags=web"
                 + "&description=Search the current public web for up-to-date information. Use this tool for current events, latest releases, recent documentation, news, or information that cannot be found in historical LEN incidents."
-                + "&parameter.query.type=string"
+                + "&parameter.query=string"
                 + "&parameter.query.description=The web search query"
                 + "&parameter.query.required=true")
 
